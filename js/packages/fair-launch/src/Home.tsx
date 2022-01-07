@@ -46,6 +46,7 @@ import { CTAButton, MintButton } from './MintButton';
 import { AntiRug } from './AntiRug';
 import { getPhase, Phase, PhaseHeader } from './PhaseHeader';
 import { GatewayProvider } from '@civic/solana-gateway-react';
+import Display from './display.jpeg'
 
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
@@ -652,6 +653,15 @@ const Home = (props: HomeProps) => {
         0.01
   );
 
+  const StyledImage = styled.img`
+    display: block;
+    width:400px;
+    height:400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  `;
+
   return (
     <Container style={{ marginTop: 100 }}>
       {fairLaunch && (
@@ -665,10 +675,12 @@ const Home = (props: HomeProps) => {
         <Paper
           style={{ padding: 24, backgroundColor: '#151A1F', borderRadius: 6 }}
         >
+          <StyledImage src={Display}/>
           <h3>Polana Bears Mint Launch</h3>
           <h4>Launch time: 8 Jan 2022 3am UTC</h4>
           <h4>Presale: 0.16 SOL</h4>
           <h4>Launch: 0.38 SOL</h4>
+
           <Grid container justifyContent="center" direction="column">
             <PhaseHeader
               phase={phase}

@@ -140,8 +140,8 @@ export const PhaseHeader = ({
 
       {phase === Phase.RaffleFinished && (
         <Header
-          phaseName={'Click to connect wallet!'}
-          desc={'Do the CAPTCHA carefully! :-)'}
+          phaseName={'Connect wallet!'}
+          desc={'Complete CAPTCHA!'}
           date={fairLaunch?.state.data.phaseTwoEnd}
         />
       )}
