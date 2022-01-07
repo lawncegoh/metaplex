@@ -398,12 +398,13 @@ const Home = (props: HomeProps) => {
         // const WL_DATE = new Date(Date.UTC(2022, 1, 8, 2, 30));
 
         const WL = [
-          'HeWyrXHyxEbs3WAKvTBFqLT6s87XRzMAxHHKzu4drPW7'
+          'HeWyrXHyxEbs3WAKvTBFqLT6s87XRzMAxHHKzu4drPW7',
+          'Gy5iZitSMiDbqWzTWJc4ckQDNXnDVD4ZuSrRzsrWCxcz'
         ]
 
         const WL_DATE = new Date('January 7, 2022 13:15:00');
 
-        const LAUNCH_DATE = new Date('January 7, 2022 14:06:00');
+        const LAUNCH_DATE = new Date('January 7, 2022 14:16:00');
     
         const dateInPast = (firstDate: Date) => {
           let today = new Date();
