@@ -403,7 +403,7 @@ const Home = (props: HomeProps) => {
 
         const WL_DATE = new Date('January 7, 2022 13:15:00');
 
-        const LAUNCH_DATE = new Date('January 7, 2022 13:42:00');
+        const LAUNCH_DATE = new Date('January 7, 2022 13:58:00');
     
         const dateInPast = (firstDate: Date) => {
           let today = new Date();
