@@ -401,12 +401,14 @@ const Home = (props: HomeProps) => {
           'HeWyrXHyxEbs3WAKvTBFqLT6s87XRzMAxHHKzu4drPW7'
         ]
 
-        const LAUNCH_DATE = new Date(Date.UTC(2022, 1, 7, 1));
-    
-        const WL_DATE = new Date(Date.UTC(2022, 1, 7, 1, 15));
+        const WL_DATE = new Date('January 7, 2022 13:15:00');
+
+        const LAUNCH_DATE = new Date('January 7, 2022 13:42:00');
     
         const dateInPast = (firstDate: Date) => {
           let today = new Date();
+          console.log(firstDate.getTime());
+          console.log(today.getTime());
       
           if (firstDate.getTime() <= today.getTime()) {
             return true;
@@ -426,8 +428,10 @@ const Home = (props: HomeProps) => {
       const whitelisted = checkInWL(wallet.publicKey?.toBase58());
   
       const whiteListStarted = dateInPast(WL_DATE);
+      console.log("whitelisted " + whiteListStarted);
   
       const publicStarted = dateInPast(LAUNCH_DATE);
+      console.log("public sale " + publicStarted)
   
       const canMint = (whitelisted && whiteListStarted) || publicStarted;
   
