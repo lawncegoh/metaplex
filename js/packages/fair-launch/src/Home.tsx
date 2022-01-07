@@ -16,7 +16,6 @@ import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
 import CloseIcon from '@material-ui/icons/Close';
-import Display from '../src/display.jpeg';
 
 import Alert from '@material-ui/lab/Alert';
 
@@ -663,10 +662,12 @@ const Home = (props: HomeProps) => {
         />
       )}
       <Container maxWidth="xs" style={{ position: 'relative' }}>
+        <h4>Launch time: 8 Jan 2022 3am UTC</h4>
+        <h4>Presale: 0.16 SOL</h4>
+        <h4>Launch: 0.38 SOL</h4>
         <Paper
           style={{ padding: 24, backgroundColor: '#151A1F', borderRadius: 6 }}
         >
-          <img src={Display} alt="display"/>
           <Grid container justifyContent="center" direction="column">
             <PhaseHeader
               phase={phase}
