@@ -666,7 +666,7 @@ const Home = (props: HomeProps) => {
         <Paper
           style={{ padding: 24, backgroundColor: '#151A1F', borderRadius: 6 }}
         >
-          <img src={Gif} alt="gif"/>
+          <img src={Display} alt="display"/>
           <Grid container justifyContent="center" direction="column">
             <PhaseHeader
               phase={phase}
