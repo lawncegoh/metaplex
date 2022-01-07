@@ -22,12 +22,14 @@ export const MintButton = ({
   candyMachine,
   fairLaunch,
   isMinting,
+  isDisabled,
   fairLaunchBalance,
 }: {
   onMint: () => Promise<void>;
   candyMachine: CandyMachineAccount | undefined;
   fairLaunch?: FairLaunchAccount | undefined;
   isMinting: boolean;
+  isDisabled:boolean;
   fairLaunchBalance: number;
 }) => {
   const { requestGatewayToken, gatewayStatus } = useGateway();
@@ -45,6 +47,7 @@ export const MintButton = ({
       disabled={
         candyMachine?.state.isSoldOut ||
         isMinting ||
+        isDisabled ||
         !candyMachine?.state.isActive ||
         (fairLaunch?.ticket?.data?.state.punched && fairLaunchBalance === 0)
       }

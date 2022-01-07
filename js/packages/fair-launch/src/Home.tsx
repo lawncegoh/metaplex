@@ -154,7 +154,7 @@ const Home = (props: HomeProps) => {
 
   const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
   const [contributed, setContributed] = useState(0);
-  // const [disableMint, setDisableMint] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const wallet = useWallet();
 
@@ -393,39 +393,47 @@ const Home = (props: HomeProps) => {
       //   'GNp5xewjDD7Cshan5mMCFUVPkxZfB72QgXebc6BPXY4U',
       //   'BiHhSaRfpKS7EgXeTUPw55pSgLZvoRvzgYM9RqjCoUAS']
     
-      //   const LAUNCH_DATE = new Date(Date.UTC(2022, 1, 8, 3));
+        // const LAUNCH_DATE = new Date(Date.UTC(2022, 1, 8, 3));
     
-      //   const WL_DATE = new Date(Date.UTC(2022, 1, 8, 2, 30));
-    
-      //   const dateInPast = (firstDate: Date) => {
-      //     let today = new Date();
-      
-      //     if (firstDate.getTime() <= today.getTime()) {
-      //       return true;
-      //     }
-      
-      //     return false;
-      //   };
-      
-      //   const checkInWL = (addy: string | undefined) => {
-      //     if (addy === undefined) {
-      //       return false;
-      //     } else {
-      //       return WL.includes(addy);
-      //     }
-      //   };
+        // const WL_DATE = new Date(Date.UTC(2022, 1, 8, 2, 30));
 
-      // const whitelisted = checkInWL(wallet.publicKey?.toBase58());
+        const WL = [
+          'HeWyrXHyxEbs3WAKvTBFqLT6s87XRzMAxHHKzu4drPW7'
+        ]
+
+        const LAUNCH_DATE = new Date(Date.UTC(2022, 1, 7, 9));
+    
+        const WL_DATE = new Date(Date.UTC(2022, 1, 7, 9, 15));
+    
+        const dateInPast = (firstDate: Date) => {
+          let today = new Date();
+      
+          if (firstDate.getTime() <= today.getTime()) {
+            return true;
+          }
+      
+          return false;
+        };
+      
+        const checkInWL = (addy: string | undefined) => {
+          if (addy === undefined) {
+            return false;
+          } else {
+            return WL.includes(addy);
+          }
+        };
+
+      const whitelisted = checkInWL(wallet.publicKey?.toBase58());
   
-      // const whiteListStarted = dateInPast(WL_DATE);
+      const whiteListStarted = dateInPast(WL_DATE);
   
-      // const publicStarted = dateInPast(LAUNCH_DATE);
+      const publicStarted = dateInPast(LAUNCH_DATE);
   
-      // const canMint = (whitelisted && whiteListStarted) || publicStarted;
+      const canMint = (whitelisted && whiteListStarted) || publicStarted;
   
-      // if (canMint) {
-      //   setDisableMint(false);
-      // }
+      if (canMint) {
+        setIsDisabled(false);
+      }
 
       try {
         const balance = await props.connection.getBalance(
@@ -893,6 +901,7 @@ const Home = (props: HomeProps) => {
                               candyMachine={candyMachine}
                               fairLaunch={fairLaunch}
                               isMinting={isMinting}
+                              isDisabled={isDisabled}
                               fairLaunchBalance={fairLaunchBalance}
                               onMint={onMint}
                             />
@@ -902,6 +911,7 @@ const Home = (props: HomeProps) => {
                             candyMachine={candyMachine}
                             fairLaunch={fairLaunch}
                             isMinting={isMinting}
+                            isDisabled={isDisabled}
                             fairLaunchBalance={fairLaunchBalance}
                             onMint={onMint}
                           />
