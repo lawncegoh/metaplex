@@ -140,15 +140,15 @@ export const PhaseHeader = ({
 
       {phase === Phase.RaffleFinished && (
         <Header
-          phaseName={'Phase 3'}
-          desc={'Raffle finished!'}
+          phaseName={'Click to connect wallet!'}
+          desc={'Do the CAPTCHA carefully! :-)'}
           date={fairLaunch?.state.data.phaseTwoEnd}
         />
       )}
 
       {phase === Phase.WaitForCM && (
         <Header
-          phaseName={'Phase 3'}
+          phaseName={'To all Polana Seekers...'}
           desc={'Minting starts in...'}
           date={candyMachine?.state.goLiveDate}
         />
@@ -164,7 +164,7 @@ export const PhaseHeader = ({
 
       {phase === Phase.Phase4 && (
         <Header
-          phaseName={candyMachinePredatesFairLaunch ? 'Phase 3' : 'Phase 4'}
+          phaseName={candyMachinePredatesFairLaunch ? 'Phase 3' : 'Get your bears now!!'}
           desc={'Candy Time 🍬 🍬 🍬'}
           date={candyMachine?.state.goLiveDate}
           status="LIVE"
