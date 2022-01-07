@@ -665,7 +665,7 @@ const Home = (props: HomeProps) => {
         <Paper
           style={{ padding: 24, backgroundColor: '#151A1F', borderRadius: 6 }}
         >
-          <h5>Polana Bears Mint Launch</h5>
+          <h3>Polana Bears Mint Launch</h3>
           <h4>Launch time: 8 Jan 2022 3am UTC</h4>
           <h4>Presale: 0.16 SOL</h4>
           <h4>Launch: 0.38 SOL</h4>
