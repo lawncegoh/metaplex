@@ -401,9 +401,9 @@ const Home = (props: HomeProps) => {
           'HeWyrXHyxEbs3WAKvTBFqLT6s87XRzMAxHHKzu4drPW7'
         ]
 
-        const LAUNCH_DATE = new Date(Date.UTC(2022, 1, 7, 9));
+        const LAUNCH_DATE = new Date(Date.UTC(2022, 1, 7, 1));
     
-        const WL_DATE = new Date(Date.UTC(2022, 1, 7, 9, 15));
+        const WL_DATE = new Date(Date.UTC(2022, 1, 7, 1, 15));
     
         const dateInPast = (firstDate: Date) => {
           let today = new Date();
