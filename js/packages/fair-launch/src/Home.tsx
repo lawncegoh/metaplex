@@ -16,7 +16,7 @@ import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
 import CloseIcon from '@material-ui/icons/Close';
-import Gif from '../src/mint-gif.gif';
+import Display from '../src/display.jpeg';
 
 import Alert from '@material-ui/lab/Alert';
 
