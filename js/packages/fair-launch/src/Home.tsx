@@ -925,7 +925,7 @@ const Home = (props: HomeProps) => {
                               onMint={onMint}
                             />
                             <h4>Bears Remaining / Total Supply </h4>
-                            <h4>{candyMachine?.state.itemsRemaining-500} / {candyMachine?.state.itemsAvailable}</h4>
+                            <h4>{candyMachine?.state.itemsRemaining-550} / {candyMachine?.state.itemsAvailable}</h4>
                           </GatewayProvider>
                         ) : (
                           <div>
