@@ -263,6 +263,7 @@ const Home = (props: HomeProps) => {
       }
 
       const WL = [
+        'AE3ajp398XmwuPhtsUqwVKc7dVfMsuqjMYesyQha5ffi',
         'D6br5rfg3DNfRX4hY2ZKEuwzDJeCaabKmhjeehSRCZj9',
         '37QcyyRJ4uxu6ChCuJDrkqNaeCHR1y8ZyZLFHRWHCDVZ',
         'Gy5iZitSMiDbqWzTWJc4ckQDNXnDVD4ZuSrRzsrWCxcz',
